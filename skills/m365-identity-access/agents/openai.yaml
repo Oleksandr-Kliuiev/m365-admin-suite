@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Identity and Access"
+  short_description: "Entra roles, PIM, authentication, and access policy"
+  default_prompt: "Use $m365-identity-access to review and apply this Microsoft Entra access change."
+policy:
+  allow_implicit_invocation: true
+

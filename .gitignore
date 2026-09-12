@@ -1,0 +1,10 @@
+.m365-admin/
+tenant-catalog.yaml
+tenant-catalog.yml
+*.intunewin
+*.pfx
+*.p12
+*.key
+work/
+__pycache__/
+*.py[cod]

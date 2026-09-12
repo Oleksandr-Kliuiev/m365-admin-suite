@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Service Operations"
+  short_description: "Service Health, incidents, and Message Center"
+  default_prompt: "Use $m365-service-operations to check current tenant service incidents and advisories."
+policy:
+  allow_implicit_invocation: true
+

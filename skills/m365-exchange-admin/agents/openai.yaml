@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Exchange Admin"
+  short_description: "Exchange mailboxes, recipients, and mail flow"
+  default_prompt: "Use $m365-exchange-admin to configure and verify this Exchange Online recipient."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft Intune Admin"
+  short_description: "Intune devices, policies, applications, and remediation"
+  default_prompt: "Use $m365-intune-admin to configure and verify this Intune deployment."
+policy:
+  allow_implicit_invocation: true
+

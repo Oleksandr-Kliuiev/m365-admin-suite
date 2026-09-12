@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Browser Admin"
+  short_description: "Multi-portal employee lifecycle administration"
+  default_prompt: "Use $m365-browser-admin to conduct a complete Microsoft 365 onboarding for a new employee."
+policy:
+  allow_implicit_invocation: true
+

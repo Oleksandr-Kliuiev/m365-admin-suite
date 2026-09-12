@@ -1,0 +1,79 @@
+schema_version: 1
+
+tenant:
+  display_name: "Example Company"
+  primary_domain: "example.com"
+  tenant_id: "11111111-1111-1111-1111-111111111111"
+  verified_at: "2026-09-12"
+
+naming:
+  user_upn: "{first}.{last}@example.com"
+  mail_nickname: "{first}.{last}"
+  display_name: "{first} {last}"
+
+profiles:
+  base-employee:
+    description: "Standard internal employee"
+    identity:
+      usage_location: "NO"
+      employee_type: "Employee"
+    licenses:
+      required:
+        - name: "Microsoft 365 Business Premium"
+          sku_part_number: "SPB"
+          assignment: "group"
+    groups:
+      required:
+        - name: "All Employees"
+          id: "22222222-2222-2222-2222-222222222222"
+    first_sign_in:
+      change_temporary_password: true
+      register_mfa: true
+
+  sales-norway:
+    description: "Norway sales employee"
+    extends:
+      - "base-employee"
+    identity:
+      department: "Sales"
+      usage_location: "NO"
+    groups:
+      required:
+        - name: "Sales Norway"
+          id: "33333333-3333-3333-3333-333333333333"
+        - name: "Intune Windows Production"
+          id: "44444444-4444-4444-4444-444444444444"
+    collaboration:
+      teams:
+        - name: "Sales Norway"
+          id: "55555555-5555-5555-5555-555555555555"
+      sharepoint_sites:
+        - url: "https://example.sharepoint.com/sites/sales"
+    intune:
+      applications:
+        - name: "Microsoft 365 Apps for Windows"
+          id: "66666666-6666-6666-6666-666666666666"
+      compliance_policies:
+        - name: "Windows Production Compliance"
+          id: "77777777-7777-7777-7777-777777777777"
+      configuration_profiles:
+        - name: "Windows Corporate Baseline"
+          id: "88888888-8888-8888-8888-888888888888"
+
+offboarding:
+  default_mode: "safe"
+  block_sign_in: true
+  revoke_sessions: true
+  transfer_owned_resources: true
+  remove_direct_licenses_after_preservation: true
+  delete_user: false
+
+safety:
+  protected_accounts:
+    - upn: "breakglass@example.com"
+      id: "99999999-9999-9999-9999-999999999999"
+      reason: "Emergency access"
+  protected_groups:
+    - name: "Global Administrators"
+      id: "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"
+

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Helpdesk Admin"
+  short_description: "User sign-in, password, session, and MFA support"
+  default_prompt: "Use $m365-helpdesk-admin to diagnose and restore this user's Microsoft 365 access."
+policy:
+  allow_implicit_invocation: true
+

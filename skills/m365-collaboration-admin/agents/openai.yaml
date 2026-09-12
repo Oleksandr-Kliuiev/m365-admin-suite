@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Collaboration Admin"
+  short_description: "Teams, SharePoint, OneDrive, groups, and flows"
+  default_prompt: "Use $m365-collaboration-admin to configure and verify this collaboration access change."
+policy:
+  allow_implicit_invocation: true
+

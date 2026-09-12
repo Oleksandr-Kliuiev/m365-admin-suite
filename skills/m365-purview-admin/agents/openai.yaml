@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft Purview Admin"
+  short_description: "Retention, labels, DLP, audit, and eDiscovery"
+  default_prompt: "Use $m365-purview-admin to review and apply this Microsoft Purview compliance request."
+policy:
+  allow_implicit_invocation: true
+

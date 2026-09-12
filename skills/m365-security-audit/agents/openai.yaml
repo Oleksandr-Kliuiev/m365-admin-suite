@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Security Audit"
+  short_description: "Security evidence, sign-ins, alerts, and audit review"
+  default_prompt: "Use $m365-security-audit to investigate this Microsoft 365 security event without changing the tenant."
+policy:
+  allow_implicit_invocation: true
+

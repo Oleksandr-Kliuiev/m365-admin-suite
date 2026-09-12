@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 Tenant Catalog"
+  short_description: "Discover and maintain tenant access profiles"
+  default_prompt: "Use $m365-tenant-catalog to discover and create private access profiles for this tenant."
+policy:
+  allow_implicit_invocation: true
+

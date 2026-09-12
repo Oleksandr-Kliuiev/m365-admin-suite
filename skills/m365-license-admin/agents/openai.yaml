@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft 365 License Admin"
+  short_description: "License inventory, assignment, and error handling"
+  default_prompt: "Use $m365-license-admin to review and correct this Microsoft 365 license assignment."
+policy:
+  allow_implicit_invocation: true
+

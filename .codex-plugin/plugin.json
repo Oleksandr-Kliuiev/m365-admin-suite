@@ -1,0 +1,35 @@
+{
+  "name": "m365-admin-suite",
+  "version": "0.1.0",
+  "description": "Browser-based Microsoft 365 administration skills for production tenant operations.",
+  "author": {
+    "name": "Microsoft 365 Admin Suite Contributors"
+  },
+  "keywords": [
+    "microsoft-365",
+    "entra",
+    "intune",
+    "exchange",
+    "administration",
+    "onboarding",
+    "offboarding"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Microsoft 365 Admin Suite",
+    "shortDescription": "Production Microsoft 365 browser administration",
+    "longDescription": "Focused Codex skills for supervised Microsoft 365 administration through an authenticated browser, including lifecycle, identity, licenses, Intune, Exchange, collaboration, security, service health, and Purview.",
+    "developerName": "Microsoft 365 Admin Suite Contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Onboard a new Microsoft 365 employee.",
+      "Prepare a safe offboarding for a user.",
+      "Review this tenant's license assignments."
+    ],
+    "brandColor": "#0078D4"
+  }
+}
