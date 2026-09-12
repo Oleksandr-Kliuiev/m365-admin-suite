@@ -1,6 +1,6 @@
 {
   "name": "m365-admin-suite",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Browser-based Microsoft 365 administration skills for production tenant operations.",
   "author": {
     "name": "Microsoft 365 Admin Suite Contributors"

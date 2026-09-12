@@ -23,7 +23,7 @@ Codex can select a focused skill from a natural-language request. Use the explic
 $m365-admin-suite conduct a complete onboarding for a new employee
 ```
 
-`$m365-admin-suite` is intentionally explicit-only, so it does not compete with focused skills during automatic selection. It routes browser administration requests and must never substitute the unrelated `m365-admin-stack`, which installs and repairs CLI/MCP infrastructure.
+`m365-admin-suite` is discoverable so Codex recognizes requests that name it with or without the `$` prefix. Its description limits routing to requests that explicitly name the suite, so ordinary domain prompts continue to select focused skills. It must never substitute the unrelated `m365-admin-stack`, which installs and repairs CLI/MCP infrastructure.
 
 ## Tenant catalog
 

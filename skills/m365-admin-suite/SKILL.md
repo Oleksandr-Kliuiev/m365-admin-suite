@@ -1,6 +1,6 @@
 ---
 name: m365-admin-suite
-description: Unified explicit entrypoint for the Microsoft 365 Admin Suite. Use when the user invokes $m365-admin-suite to route and execute browser-based Microsoft 365 administration across lifecycle, helpdesk, licenses, Entra, Intune, Exchange, collaboration, security, service health, Purview, or tenant catalog work. Never route this request to m365-admin-stack, which is only for CLI/MCP stack installation and repair.
+description: Unified entrypoint for the Microsoft 365 Admin Suite. Use only when the user explicitly names m365-admin-suite, with or without the $ prefix, to route and execute browser-based Microsoft 365 administration across lifecycle, helpdesk, licenses, Entra, Intune, Exchange, collaboration, security, service health, Purview, or tenant catalog work. Never route this request to m365-admin-stack, which is only for CLI/MCP stack installation and repair.
 ---
 
 # Microsoft 365 Admin Suite
@@ -38,4 +38,3 @@ Use `.m365-admin/tenant-catalog.yaml` when present or when the user provides a c
 ## Completion
 
 Finish with the selected route, tenant and exact targets, verified changes, already-correct items, pending propagation, blockers, destructive actions, and required administrator/end-user/device steps. Never report a task as complete based only on a click or toast.
-

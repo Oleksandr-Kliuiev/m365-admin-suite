@@ -3,4 +3,4 @@ interface:
   short_description: "Unified router for Microsoft 365 administration"
   default_prompt: "Use $m365-admin-suite to perform this Microsoft 365 administration request through the browser."
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true
