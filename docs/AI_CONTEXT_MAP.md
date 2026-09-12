@@ -4,6 +4,7 @@ Use this map to load the smallest sufficient context.
 
 | Task | Start here | Load next only when needed |
 |---|---|---|
+| Explicit `$m365-admin-suite` request | `skills/m365-admin-suite/SKILL.md` | Exactly one owning skill, plus another only for a genuine cross-domain dependency |
 | Full onboarding, transfer, offboarding | `skills/m365-browser-admin/SKILL.md` | Relevant lifecycle reference and browser contract |
 | Password, sign-in, MFA, sessions | `skills/m365-helpdesk-admin/SKILL.md` | `references/account-recovery.md` |
 | Licenses and license groups | `skills/m365-license-admin/SKILL.md` | `references/license-operations.md` |
@@ -16,5 +17,4 @@ Use this map to load the smallest sufficient context.
 | Retention, DLP, labels, eDiscovery | `skills/m365-purview-admin/SKILL.md` | `references/purview-operations.md` |
 | Tenant profile discovery/catalog | `skills/m365-tenant-catalog/SKILL.md` | Schema, example, validator |
 
-Do not load the complete `skills/` tree for a domain change. Routing descriptions live in each `SKILL.md` frontmatter.
-
+Do not load the complete `skills/` tree for a domain change. The suite dispatcher selects the smallest owning skill; routing descriptions live in each `SKILL.md` frontmatter.

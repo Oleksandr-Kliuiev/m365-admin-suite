@@ -4,6 +4,7 @@ This Codex plugin provides focused skills for supervised Microsoft 365 administr
 
 ## Included skills
 
+- `m365-admin-suite`: explicit unified entrypoint that selects the correct focused skill.
 - `m365-browser-admin`: multi-portal onboarding, transfer, and safe offboarding.
 - `m365-helpdesk-admin`: sign-in, password, session, and MFA support.
 - `m365-license-admin`: license inventory, assignment, removal, and group-based licensing.
@@ -16,11 +17,13 @@ This Codex plugin provides focused skills for supervised Microsoft 365 administr
 - `m365-purview-admin`: retention, labels, DLP, audit, and eDiscovery.
 - `m365-tenant-catalog`: discovery and maintenance of private tenant profiles.
 
-Codex can select a focused skill from a natural-language request. Explicit invocation remains available when an administrator wants to lock the route, for example:
+Codex can select a focused skill from a natural-language request. Use the explicit suite entrypoint when an administrator wants one stable command that performs the routing:
 
 ```text
-$m365-browser-admin conduct a complete onboarding for a new employee
+$m365-admin-suite conduct a complete onboarding for a new employee
 ```
+
+`$m365-admin-suite` is intentionally explicit-only, so it does not compete with focused skills during automatic selection. It routes browser administration requests and must never substitute the unrelated `m365-admin-stack`, which installs and repairs CLI/MCP infrastructure.
 
 ## Tenant catalog
 
@@ -31,4 +34,3 @@ The catalog is optional. Without it, the selected skill performs read-only disco
 ## Operating model
 
 The administrator signs in to the required Microsoft portals, opens the intended tenant, and gives Codex the task. The skill performs routine authorized operations, verifies each persisted change, and reports completed, already-correct, pending, and blocked work. Interactive authentication, physical-device actions, and unrequested irreversible actions remain administrator checkpoints.
-
