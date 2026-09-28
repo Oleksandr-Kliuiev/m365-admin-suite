@@ -16,6 +16,7 @@ Use this map to load the smallest sufficient context. All 12 skills install toge
 | Service incident or advisory | `skills/m365-service-operations/SKILL.md` | `references/service-health.md` |
 | Retention, DLP, labels, eDiscovery | `skills/m365-purview-admin/SKILL.md` | `references/purview-operations.md` |
 | Tenant profile discovery/catalog | `skills/m365-tenant-catalog/SKILL.md` | Schema, example, validator |
+| Report email through Outlook on Windows or macOS | `skills/m365-browser-admin/references/reports-and-exports.md` | `docs/outlook-report-scenarios.md` only when changing or validating delivery behavior |
 
 Focused domain requests start directly with their specialist; no suite invocation or explicit skill name is required. Do not load the complete `skills/` tree for a domain change. The lifecycle owner covers its cross-portal workflow without loading every domain skill. Routing descriptions live in each `SKILL.md` frontmatter.
 

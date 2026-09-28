@@ -10,4 +10,6 @@ Keep automatic invocation descriptions mutually discriminating. `m365-admin-suit
 
 Reuse the active authenticated Chrome session unless the user explicitly chooses another browser. Load shared navigation guidance only for an unknown route or navigation problem, and report handling only for complete lists, reports, exports, or email. Reuse loaded instructions, while refreshing affected live state before later changes and verifying saved results.
 
+Report email uses Outlook on the web in that profile across Windows and macOS. Keep sender/recipient verification, actual attachment completion, single-send authorization and Sent Items checks in `reports-and-exports.md`; use `docs/outlook-report-scenarios.md` when changing delivery behavior.
+
 Treat Microsoft 365 tenants as production unless the user explicitly identifies a lab. Preserve exact targets, current-state checks, authorization boundaries, idempotency, pagination handling, and independent after-state verification.

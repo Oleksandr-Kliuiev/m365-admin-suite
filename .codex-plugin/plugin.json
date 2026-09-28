@@ -1,6 +1,6 @@
 {
   "name": "m365-admin-suite",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Microsoft 365 administration in authenticated Chrome, with natural-language and voice routing to focused skills.",
   "author": {
     "name": "Microsoft 365 Admin Suite Contributors"
