@@ -1,9 +1,11 @@
 ---
 name: m365-tenant-catalog
-description: Discover, create, compare, validate, and maintain a private tenant-specific Microsoft 365 administration catalog containing approved access profiles, licenses, groups, applications, policies, naming rules, protected accounts, and lifecycle defaults. Use when preparing or updating reusable tenant profiles. Do not use the catalog itself as authorization to mutate the live tenant.
+description: "Microsoft 365 tenant catalogs: discover, create, compare and validate reusable access profiles and lifecycle defaults. Catalogs never authorize live changes."
 ---
 
 # Microsoft 365 Tenant Catalog
+
+For live discovery, read the [shared Chrome contract](../m365-browser-admin/references/browser-operation-contract.md) only if not already loaded. Local catalog edits need no browser session.
 
 Build a private intended-state catalog from administrator input and read-only tenant discovery. The catalog accelerates other Microsoft 365 skills but never replaces live verification or task authorization.
 
@@ -14,6 +16,8 @@ Use a user-provided path or `.m365-admin/tenant-catalog.yaml` in the current wor
 Read [references/catalog-schema.md](references/catalog-schema.md) before creating or materially changing a catalog. Use [assets/tenant-catalog.example.yaml](assets/tenant-catalog.example.yaml) as the structural template.
 
 ## Discovery workflow
+
+For a narrow update, inspect only the requested profile/fields and their dependencies. The broader inventory below applies when creating or refreshing the corresponding catalog scope; sample users only when deriving an access profile.
 
 1. Confirm tenant and administrator in the authenticated browser.
 2. Inventory verified domains, license SKUs/capacity, relevant groups, roles, applications, Intune policies, collaboration resources, and lifecycle conventions.
@@ -28,4 +32,3 @@ Read [references/catalog-schema.md](references/catalog-schema.md) before creatin
 Preserve administrator-authored comments and unknown forward-compatible keys when practical. Do not silently remove profiles or change production scope because a sampled user differs. Record discovery date and the tenant identity used for verification.
 
 Finish with profiles added/changed, unresolved differences, unverified IDs, and validation results. Do not make tenant mutations during catalog discovery unless separately requested.
-

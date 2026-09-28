@@ -1,9 +1,11 @@
 ---
 name: m365-license-admin
-description: Administer Microsoft 365 product licenses and service plans through an authenticated browser, including inventory, seat capacity, direct and group-based assignment, removal, disabled plans, usage-location prerequisites, and license-error diagnosis. Use for license-focused requests. Do not use for complete employee lifecycle, Intune configuration, or mailbox administration beyond license dependency analysis.
+description: "Microsoft 365 licenses in Chrome: inventory, capacity, direct or group assignment, removal, service plans and errors. Use for license-focused tasks."
 ---
 
 # Microsoft 365 License Admin
+
+Read the [shared Chrome contract](../m365-browser-admin/references/browser-operation-contract.md) only if not already loaded; reuse it for this session.
 
 Resolve the exact SKU and target by stable identifiers. Read current assignment sources before mutation and avoid duplicate direct licensing when a group already supplies the entitlement.
 
@@ -13,5 +15,4 @@ Use `.m365-admin/tenant-catalog.yaml` when available to identify approved SKUs, 
 
 Production license groups are valid targets. Do not create a pilot group unless requested. Before bulk or group changes, verify SKU capacity, evaluated membership, exclusions, existing assignment errors, and downstream workloads affected.
 
-Finish with seats before/after, exact users/groups changed, assignment source, service-plan state, errors, pending propagation, and license-dependent workload risks.
-
+For an inventory request, report the requested user's licenses and relevant assignment/service-plan state; do not change usage location or assignments. For changes, retain seats before/after, exact users/groups changed, assignment source, errors, pending propagation, and material workload risks. Keep the spoken result brief.

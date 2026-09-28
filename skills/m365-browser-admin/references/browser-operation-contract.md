@@ -1,36 +1,14 @@
-# Browser operation contract
+# Shared Chrome contract
 
-## Route to the owning portal
+Use this contract for routed or direct Microsoft 365 work. Reuse loaded instructions throughout the session; after context loss, reread only missing instructions for the active task. Include the selected workflow's prerequisites, critical checkpoint, and verification when reading sections.
 
-- Microsoft 365 admin center: users, billing, licenses, and general organization settings.
-- Microsoft Entra admin center: identities, groups, roles, authentication, sign-ins, and Conditional Access.
-- Microsoft Intune admin center: devices, enrollment, compliance, profiles, applications, and endpoint security.
-- Exchange admin center: recipients, delegation, forwarding, shared mailboxes, and mail flow.
-- Teams admin center: meeting, messaging, voice, application, and Teams policies.
-- SharePoint admin center: sites, sharing, ownership, and OneDrive administration.
-- Power Automate: environments, flows, connections, ownership, and run history.
+- Default to the active authenticated Chrome session; honor an explicit browser choice. Reuse current runtime documentation; obey tool confirmation/freshness rules. Attach directly to a known tab, otherwise inspect inventory once. Reuse its initial state and valid binding. Never substitute another browser/profile, incognito, CLI, or a fresh login to bypass unavailable control. On expired login, MFA or unavailable control, state the blocker for human restoration; never request passwords, codes, cookies or tokens.
+- Verify live administrator, tenant/domain and exact target, preferably UPN/object ID. The requested tenant overrides the active tenant. Recheck tenant **and target** after redirects, switches or user-led context changes; disambiguate names with a secondary identifier. An unambiguous selected record can resolve “this user”. Reuse established request details; ask only unresolved material choices.
+- Use current UI names/roles/IDs or fresh screenshots per tool support. Batch only independent fields in an unchanged form; stop at navigation, modal/search changes, submission or destructive actions. Use built-in readiness, then fresh affected state; prefer small scoped output where supported. Never replay stale IDs/coordinates or weaken tool freshness rules.
+- Inspect relevant current state and source of authority before mutation; respect synchronized/dynamic ownership. A catalog describes intended state, not live facts or authorization. Read only its relevant profile/defaults and verify referenced objects live.
+- Spoken/typed requests authorize their stated scope across navigation and retries. Inspection does not authorize remediation. Privileged grants, broad policy changes, deletion, wipe, purge and hold removal need clear exact-operation/target authorization plus any tool-required confirmation. Preserve existing authorization without routine reconfirmation.
+- Keep a compact internal session task record across commands (no per-step files): tenant, exact target, relevant verified state, completed actions, pending commit/submission and follow-up. Reuse descriptions/instructions, not prior observations as current facts. Refresh affected state before a later mutation and after changes; do not treat remembered evidence as current verification. Never persist secrets or temporary credentials.
+- On failure, refresh and make one grounded correction, then return once to the known owning page. Stop that path after these two attempts; finish independent authorized work. Inspect object/job/sent history before retrying ambiguous submissions; never create duplicates or resend to resolve uncertainty. Check propagation at most twice per turn unless progress or the user warrants more; report pending instead of mutating again.
+- Verify saved/resulting state; clicks/toasts prove neither provisioning/application nor delivery/testing. Voice updates: brief intended outcome, then verified result and material blocker/pending work in one or two sentences; no click narration or unnecessary personal data.
 
-Start from the owning portal. Reuse the same browser profile so authenticated state carries across portals. Confirm tenant and administrator after redirects or directory switches.
-
-## Stable interaction loop
-
-1. Observe a fresh accessibility/UI state.
-2. Resolve controls by semantic role, accessible name, visible value, or stable ID. Avoid coordinates, row numbers, and stale element references.
-3. Perform one coherent action or fill one unchanged form.
-4. Wait for the relevant readiness signal: loading completion, changed result count, blade heading, URL, status, or toast.
-5. Observe again and verify the intended object state independently.
-
-After navigation, modal changes, refreshes, or asynchronous updates, discard old element references. Before retrying a mutation, read the object to determine whether the first attempt succeeded.
-
-## Search and pagination
-
-Use exact UPN or object ID first, then exact display name plus secondary attributes. Clear old filters before searching. Validate the complete row and details before mutation.
-
-Use server-side search, then filters, then stable sorting, then pagination. When paging, track page number and stable boundary IDs; stop only when the target is found, Next is disabled, or repeated boundary IDs prove the list is exhausted. For virtualized lists, scroll the table container and track unique IDs. Never report `not found` after inspecting only the first page.
-
-## Evidence and recovery
-
-Maintain a compact record of before state, requested change, portal acknowledgement, independently observed after state, and downstream dependencies. A toast is provisional evidence.
-
-Use bounded retries for eventual consistency. Do not create duplicate users, direct licenses, memberships, policies, apps, or device actions because propagation is slow. Classify blockers as authentication, tenant mismatch, permission, licensing, object conflict, synchronized/dynamic source, portal validation, throttling/loading, downstream provisioning, or required end-user/device action.
-
+Preserve the tenant's cloud; use existing/live portal links and never invent tenant URLs or send sovereign-cloud tenants to public-cloud roots. Read [navigation](browser-navigation.md) only to resolve an unknown route or navigation problem. For complete lists, reports, exports or email, read [report handling](reports-and-exports.md). Load only the selected specialist/workflow; do not reload siblings or completed workflows.

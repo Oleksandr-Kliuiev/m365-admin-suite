@@ -1,7 +1,7 @@
 {
   "name": "m365-admin-suite",
-  "version": "0.2.1",
-  "description": "Browser-based Microsoft 365 administration skills for production tenant operations.",
+  "version": "0.2.2",
+  "description": "Microsoft 365 administration in authenticated Chrome, with natural-language and voice routing to focused skills.",
   "author": {
     "name": "Microsoft 365 Admin Suite Contributors"
   },
@@ -17,8 +17,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Microsoft 365 Admin Suite",
-    "shortDescription": "Production Microsoft 365 browser administration",
-    "longDescription": "A unified entrypoint and focused Codex skills for supervised Microsoft 365 administration through an authenticated browser, including lifecycle, identity, licenses, Intune, Exchange, collaboration, security, service health, and Purview.",
+    "shortDescription": "Microsoft 365 administration in authenticated Chrome",
+    "longDescription": "Natural-language and voice requests route to focused Codex skills for supervised Microsoft 365 administration in authenticated Chrome. All suite skills install together and reuse a shared browser contract, covering lifecycle, identity, licenses, Intune, Exchange, collaboration, security, service health, Purview, and tenant catalogs.",
     "developerName": "Microsoft 365 Admin Suite Contributors",
     "category": "Productivity",
     "capabilities": [
@@ -26,7 +26,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use $m365-admin-suite for Microsoft 365 administration.",
+      "Help me administer the selected Microsoft 365 tenant in Chrome.",
       "Prepare a safe offboarding for a user.",
       "Review this tenant's license assignments."
     ],

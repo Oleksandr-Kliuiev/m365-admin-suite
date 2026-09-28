@@ -1,9 +1,11 @@
 ---
 name: m365-identity-access
-description: Administer Microsoft Entra access through an authenticated browser, including directory roles, PIM assignments and activation, Conditional Access, authentication methods, named locations, access reviews, and privileged groups. Use for identity-policy or privileged-access requests. Do not use for routine password support, ordinary group membership, or full employee onboarding/offboarding.
+description: "Microsoft Entra access in Chrome: roles, PIM, Conditional Access, authentication policy and access reviews. Use for policy or privileged-access tasks."
 ---
 
 # Microsoft 365 Identity and Access
+
+Read the [shared Chrome contract](../m365-browser-admin/references/browser-operation-contract.md) only if not already loaded; reuse it for this session.
 
 Treat identity policy and privileged access as high-impact production configuration. Confirm tenant, administrator, exact object IDs, current policy state, and authorization scope before mutation.
 
@@ -18,4 +20,3 @@ Read [references/privileged-access.md](references/privileged-access.md) for role
 - A production-wide policy change may be performed when explicitly requested; verify break-glass exclusions and expected blast radius before enabling it.
 
 Report exact role/policy IDs, scope, assignment type, activation requirements, changed controls, exclusions, verified state, and residual risk.
-

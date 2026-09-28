@@ -1,6 +1,16 @@
 # Account recovery
 
+## Start at the exact user
+
+In the existing Microsoft 365 admin center, use **Users → Active users**, search the exact UPN, and inspect the matched record. A requested license-status check uses **Licenses and Apps**. Follow the visible portal link for specialized identity diagnostics when needed; do not tour every admin center.
+
+Read-only Chrome check on 2026-09-28 verified **Users → Active users** in the current admin center. Its search field said **Press Enter key to search active users list**: filling the field alone does not prove that results have updated. Follow the actual current search instruction and verify the returned UPN. License/status filters were visible; no user or license changes were performed.
+
+Source checked 2026-09-28: [Microsoft user and license route](https://learn.microsoft.com/en-us/entra/fundamentals/license-users-groups). Use current UI labels rather than memorized selectors.
+
 ## Diagnose before changing
+
+For a precise requested action, verify only the target, relevant current state and dependencies. Use the broader diagnostic sequence below for an unexplained access problem.
 
 1. Confirm exact UPN/object ID, tenant, and administrator role.
 2. Inspect enabled/blocked state and recent sign-in records when available.

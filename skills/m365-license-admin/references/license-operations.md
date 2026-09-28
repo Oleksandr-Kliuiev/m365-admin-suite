@@ -1,10 +1,19 @@
 # License operations
 
-## Inventory and assignment
+## Fast read routes
+
+- Capacity or product inventory: Microsoft 365 admin center → **Billing → Licenses**; select the exact product. Record total, assigned, and available seats without entering assignment controls. Product totals can aggregate multiple subscriptions.
+- One user's licenses: **Users → Active users** → exact UPN → **Licenses and Apps**. If the visible search field instructs **Press Enter**, submit the search before reading results. Read current products and enabled plans.
+- Product assignments: **Billing → Licenses** → product. A group assignment is represented by the group, not every member; inspect **Teams & groups → Active teams & groups** when the task needs members. Do not treat the visible assignment-row count as a user count.
+- Use current visible labels and the shared navigation recovery rules. Inventory is read-only; usage-location edits and assignment steps below apply only when requested.
+
+Source checked 2026-09-28: [Microsoft license management routes](https://learn.microsoft.com/en-us/entra/fundamentals/license-users-groups).
+
+## Assignment
 
 1. Confirm tenant and exact product SKU; record total, assigned, and available seats.
 2. Resolve exact user or group and inspect direct, inherited, pending, and error states.
-3. Set a valid usage location before user assignment.
+3. Verify usage location before user assignment; set it only when the required value is established by the user or verified tenant profile. Do not infer a country from the interface language.
 4. Review disabled plans, mutually exclusive products, and required base entitlements.
 5. Prefer the tenant's approved group-based model. Add a direct license only when intended state requires it.
 6. Reopen the user/group license view and verify assignment status and service-plan errors.

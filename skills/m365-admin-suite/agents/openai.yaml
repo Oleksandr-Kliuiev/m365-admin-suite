@@ -1,6 +1,6 @@
 interface:
   display_name: "Microsoft 365 Admin Suite"
-  short_description: "Unified router for Microsoft 365 administration"
-  default_prompt: "Use $m365-admin-suite to perform this Microsoft 365 administration request through the browser."
+  short_description: "Fast Microsoft 365 administration in signed-in Chrome"
+  default_prompt: "Use $m365-admin-suite to perform this Microsoft 365 administration request using the active signed-in Chrome session."
 policy:
   allow_implicit_invocation: true

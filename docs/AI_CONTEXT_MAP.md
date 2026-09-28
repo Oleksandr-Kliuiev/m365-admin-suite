@@ -1,11 +1,11 @@
 # AI context map
 
-Use this map to load the smallest sufficient context.
+Use this map to load the smallest sufficient context. All 12 skills install together and share `skills/m365-browser-admin/references/browser-operation-contract.md`. For live administration, read that Chrome contract only if not already loaded; reuse it for the session. Local catalog edits do not require a browser session.
 
 | Task | Start here | Load next only when needed |
 |---|---|---|
-| Explicit `$m365-admin-suite` request | `skills/m365-admin-suite/SKILL.md` | Exactly one owning skill, plus another only for a genuine cross-domain dependency |
-| Full onboarding, transfer, offboarding | `skills/m365-browser-admin/SKILL.md` | Relevant lifecycle reference and browser contract |
+| Cross-domain or unclear natural-language/voice request; explicit suite request | `skills/m365-admin-suite/SKILL.md` | One owning specialist and its relevant workflow; another only for an independent operation outside the owner's scope |
+| Full onboarding, transfer, offboarding | `skills/m365-browser-admin/SKILL.md` | Only the requested lifecycle reference |
 | Password, sign-in, MFA, sessions | `skills/m365-helpdesk-admin/SKILL.md` | `references/account-recovery.md` |
 | Licenses and license groups | `skills/m365-license-admin/SKILL.md` | `references/license-operations.md` |
 | Entra roles and access policy | `skills/m365-identity-access/SKILL.md` | `references/privileged-access.md` |
@@ -17,4 +17,10 @@ Use this map to load the smallest sufficient context.
 | Retention, DLP, labels, eDiscovery | `skills/m365-purview-admin/SKILL.md` | `references/purview-operations.md` |
 | Tenant profile discovery/catalog | `skills/m365-tenant-catalog/SKILL.md` | Schema, example, validator |
 
-Do not load the complete `skills/` tree for a domain change. The suite dispatcher selects the smallest owning skill; routing descriptions live in each `SKILL.md` frontmatter.
+Focused domain requests start directly with their specialist; no suite invocation or explicit skill name is required. Do not load the complete `skills/` tree for a domain change. The lifecycle owner covers its cross-portal workflow without loading every domain skill. Routing descriptions live in each `SKILL.md` frontmatter.
+
+Shared references are conditional: read `skills/m365-browser-admin/references/browser-navigation.md` only to resolve an unknown route or navigation problem; read `skills/m365-browser-admin/references/reports-and-exports.md` for complete lists, reports, exports, or email. Reuse loaded instructions, but refresh affected live state before later mutations and verify saved results. After context loss, reread only missing instructions for the active task, including workflow prerequisites, checkpoints, and verification.
+
+The unrelated `m365-admin-stack` handles explicit CLI/MCP installation, repair, configuration, or verification requests; it is not a substitute for tenant administration.
+
+Run `python3 scripts/check_package.py` from the repository root to check package structure, local links, descriptions of at most 220 characters, implicit invocation, and the 700-line context ceiling.
